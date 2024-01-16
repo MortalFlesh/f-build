@@ -64,7 +64,7 @@ module internal Targets =
                 run dotnet [ "build" ] safe.SharedTestsPath
 
                 [
-                    "server", dotnet [ "watch"; "run" ] safe.ServerTestsPath
+                    "server", dotnet [ "run" ] safe.ServerTestsPath
                     //"client", dotnet [ "fable"; "watch"; "-o"; "output"; "-s"; "--run"; "npx"; "vite" ] safe.ClientTestsPath
                 ]
                 |> runParallel
